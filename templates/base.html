@@ -26,6 +26,7 @@
                 <a class="navbar-brand" href={% url 'inicio:lista_vehiculos' %}>Vehiculos</a>
                 <a class="btn btn-primary" href= {% url 'usuarios:login' %}>Iniciar Sesion</a> 
                 <a href="#">{{request.user.username}}</a>
+                <a class="btn btn-primary" href= {% url 'usuarios:registro' %}>Registrarse</a> 
                 <a class="btn btn-primary" href= {% url 'usuarios:logout' %}>CerrarSesion</a> 
             </div>
         </nav>
