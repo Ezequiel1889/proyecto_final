@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block title_head %} 
+<title> Vehiculo</title>
+{% endblock title_head %}
+
+{% block h1_header %} 
+<h1>  Vehiculo: {{vehiculo}} </h1>
+{% endblock h1_header %}
+
+{% block contenido %} 
+
+
+<ul>   
+  
+    <li> Modelo:{{vehiculos.modelo}} </li>
+    <li> Marca:{{vehiculos.marca}} </li>
+    <li> color:{{vehiculos.color}} </li>
+    <li> Fecha de ingreso:{{vehiculos.fecha_de_ingreso}}</li>
+    <li> Descripcion:{{vehiculos.descripcion}}</li>
+
+    
+</ul>
+<a href={% url 'inicio:modificar_caracteristicas' vehiculos.id %}>Modificar</a> . <a href={% url 'inicio:eliminar_vehiculo' vehiculos.id %}>Eliminar</a>
+
+
+{% endblock contenido %}

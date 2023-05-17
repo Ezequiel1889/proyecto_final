@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block titulo_head%} 
+<title> Agregar Vehiculo</title>
+{% endblock titulo_head %}
+
+{% block h1_header  %} 
+<h1> Subiendo Vehiculo </h1>
+{% endblock h1_header  %}
+
+{% block contenido %} 
+
+<form action={% url "inicio:agregar_vehiculo" %} method="post">
+    {% csrf_token %}
+    <table>
+        {{form}}
+
+    </table>
+    
+    
+    <button>Agregar Vehiculo</button>
+
+
+</form>
+    
+{% endblock contenido %}

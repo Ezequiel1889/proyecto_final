@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block titulo_head%} 
+<title> Eliminar Vehiculo</title>
+{% endblock titulo_head %}
+
+{% block h1_header  %} 
+<h1> Eliminando Caracteristicas </h1>
+{% endblock h1_header  %}
+
+{% block contenido %} 
+
+<form action={% url 'inicio:eliminar_vehiculo' vehiculos.id %} method="post">
+    {% csrf_token %}
+   <h4> Quiere eliminar vehiculo {{vehiculo}} ?</h4>
+    
+    <button>Confirmar</button>
+    
+
+
+</form>
+    
+{% endblock contenido %}

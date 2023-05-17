@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block title_head %} 
+<title> Vehiculos</title>
+{% endblock title_head %}
+
+{% block h1_header %} 
+<h1> Lista de Vehiculos </h1>
+{% endblock h1_header %}
+
+{% block contenido %} 
+
+<a href={% url 'inicio:agregar_vehiculo' %}>Agregar Vehiculo</a>
+
+{% if object_list %}
+
+<ul>   
+    {% for vehiculo in object_list %}
+    <li><a href={% url 'inicio:detalle_del_vehiculo' vehiculo.id %}>{{vehiculo}}</a> </li>
+    <a href={% url 'inicio:modificar_caracteristicas' vehiculo.id %}>Modificar</a> . <a href={% url 'inicio:eliminar_vehiculo' vehiculo.id %}>Eliminar</a>
+
+    {% endfor %}
+</ul>
+{% else %}
+<h3> No se encontraron busquedas relacionadas</h3>
+
+{% endif %}
+
+{% endblock contenido %}

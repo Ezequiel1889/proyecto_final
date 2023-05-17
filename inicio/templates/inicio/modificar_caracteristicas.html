@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block titulo_head%} 
+<title> Modificar Vehiculo</title>
+{% endblock titulo_head %}
+
+{% block h1_header  %} 
+<h1> Modificando Caracteristicas </h1>
+{% endblock h1_header  %}
+
+{% block contenido %} 
+
+<form action={% url 'inicio:modificar_caracteristicas' vehiculos.id %} method="post">
+    {% csrf_token %}
+    <table>
+        
+       {{form}}
+
+    </table>
+    
+    
+    <button>Modificar Caracteristicas</button>
+
+
+</form>
+    
+{% endblock contenido %}
