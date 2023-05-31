@@ -7,7 +7,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         {% block titulo_head%} 
-        <title>Template Base</title>
+        <title> Vehiculos </title>
         {% endblock titulo_head %}
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -25,9 +25,9 @@
                 <a class="navbar-brand" href={% url 'inicio:inicio' %}>Inicio</a>
                 <a class="navbar-brand" href={% url 'inicio:lista_vehiculos' %}>Vehiculos</a>
                 <a class="btn btn-primary" href= {% url 'usuarios:login' %}>Iniciar Sesion</a> 
+                <a class="btn btn-primary" href= {% url 'usuarios:logout' %}>CerrarSesion</a> 
                 <a href="#">{{request.user.username}}</a>
                 <a class="btn btn-primary" href= {% url 'usuarios:registro' %}>Registrarse</a> 
-                <a class="btn btn-primary" href= {% url 'usuarios:logout' %}>CerrarSesion</a> 
             </div>
         </nav>
         <!-- Masthead-->
@@ -60,13 +60,13 @@
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-facebook fs-3"></i></a>
+                                <a href="#!"><i class="bi-facebook fs-2"></i></a>
                             </li>
                             <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-twitter fs-3"></i></a>
+                                <a href="#!"><i class="bi-twitter fs-2"></i></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!"><i class="bi-instagram fs-3"></i></a>
+                                <a href="#!"><i class="bi-youtube fs-2"></i></a>
                             </li>
                         </ul>
                     </div>
