@@ -3,7 +3,7 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.decorators import login_required
+# from django.contrib.auth.decorators import login_required
 
 
 from inicio.models import Vehiculos
@@ -19,7 +19,7 @@ def acercademi(request):
 
 
 
-class VehiculosListView(ListView):
+class VehiculosListView(LoginRequiredMixin, ListView):
     model = Vehiculos
     template_name = "inicio/lista_vehiculos.html"
     

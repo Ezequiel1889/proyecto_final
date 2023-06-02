@@ -2,27 +2,27 @@
 
 
 {% block titulo_head%} 
-<title> Iniciar Sesion</title>
+<title> Editar Perfil</title>
 {% endblock titulo_head %}
 
 {% block h1_header  %} 
-<h1> Iniciar sesion </h1>
+<h1> Editar Perfil</h1>
 {% endblock h1_header  %}
 
 {% block contenido %} 
 
 {% if formulario.errors  %}
 
-<p style="color:red"> Error de Usuario o Contraseña</p>
+<p style="color:red"> Formulario erroneo</p>
    
 {% endif %}
 
-<form action= {% url 'usuarios:login' %} method="post">
+<form action= {% url 'usuarios:editar_perfil' %} method="post", enctype= "multipart/form-data">
     {% csrf_token %}
     <table>
      {{formulario}}
    </table>
 
-<button> Iniciar Sesion </button>
+<button> Editar </button>
 </form>
 {% endblock contenido %}
