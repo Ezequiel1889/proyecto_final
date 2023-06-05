@@ -14,8 +14,8 @@
 <form action={% url "inicio:agregar_vehiculo" %} method="post">
     {% csrf_token %}
     <table>
+        {{form.media}}
         {{form}}
-
     </table>
     
     

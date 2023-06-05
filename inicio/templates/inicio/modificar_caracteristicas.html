@@ -14,9 +14,8 @@
 <form action={% url 'inicio:modificar_caracteristicas' vehiculos.id %} method="post">
     {% csrf_token %}
     <table>
-        
-       {{form}}
-
+        {{form.media}}
+        {{form}}
     </table>
     
     
