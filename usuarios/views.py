@@ -59,8 +59,8 @@ def editar_perfil(request):
             
             if formulario.cleaned_data.get("avatar"):
              
-               request.user.infoavatar.avatar = formulario.cleaned_data.get("avatar")
-               request.user.infoavatar.save()
+             request.user.infoavatar.avatar = formulario.cleaned_data.get("avatar")
+             request.user.infoavatar.save()
            
             formulario.save()
             
