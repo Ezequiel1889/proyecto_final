@@ -25,7 +25,11 @@
                 <a class="navbar-brand" href={% url 'inicio:inicio' %}>Inicio</a>
                 <a class="navbar-brand" href={% url 'inicio:lista_vehiculos' %}>Vehiculos</a>
                 {% if request.user.is_authenticated %}
+                {% if request.user.infoavatar %}
                 <img src = {{request.user.infoavatar.avatar.url}} alt="" height="40px">
+
+                {% endif %}
+
                 <a href= {% url 'usuarios:editar_perfil'%}>{{request.user.username}}</a>
                 
                 <a class="btn btn-primary" href= {% url 'usuarios:logout' %}>Cerrar Sesion</a> 

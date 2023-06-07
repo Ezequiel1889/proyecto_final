@@ -11,7 +11,7 @@
 
 {% block contenido %} 
 
-<form action={% url "inicio:agregar_vehiculo" %} method="post">
+<form action={% url "inicio:agregar_vehiculo" %} method="post",  enctype="multipart/form-data">
     {% csrf_token %}
     <table>
         {{form.media}}

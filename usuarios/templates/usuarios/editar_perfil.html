@@ -17,12 +17,12 @@
    
 {% endif %}
 
-<form action= {% url 'usuarios:editar_perfil' %} method="post", enctype="multipart/form-data">
+<form action= "" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <table>
      {{formulario}}
-   </table>
-
-<button> Guardar Cambios </button>
+    </table>
+   <button type='button'><a class="navbar-brand" href={% url 'usuarios:cambiar_password' %}>Cambiar Contraseña</a></button>
+   <button>Guardar cambios</button>
 </form>
 {% endblock contenido %}
